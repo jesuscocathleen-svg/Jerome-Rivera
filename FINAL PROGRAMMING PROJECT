@@ -1,1 +1,172 @@
-...
+# ==========================================================
+# CODE QUEST: THE PROGRAMMING ADVENTURE
+# Fundamentals of Programming and Python Tutorial
+# Created by: RIVERA JEROME
+# Section: ACT 1G
+# ==========================================================
+
+import random
+
+CREATOR = "RIVERA JEROME"
+SECTION = "ACT 1 G"
+
+# COLORS AND DESIGN
+R = "\033[0m"
+B = "\033[1m"
+BLUE = "\033[94m"
+CYAN = "\033[96m"
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+RED = "\033[91m"
+PURPLE = "\033[95m"
+
+
+def line():
+    print(CYAN + "=" * 60 + R)
+
+
+def title(text):
+    line()
+    print(B + PURPLE + text.center(60) + R)
+    line()
+
+
+def pause():
+    input(YELLOW + "\nPress ENTER to continue..." + R)
+
+
+def choose(prompt, options):
+    while True:
+        answer = input(prompt).strip().upper()
+        if answer in options:
+            return answer
+        print(RED + "Invalid choice. Try again!" + R)
+
+
+def get_number(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print(RED + "Please enter a valid number!" + R)
+
+
+# ==========================================================
+# WELCOME SCREEN
+# ==========================================================
+
+def welcome():
+    title("WELCOME TO CODE QUEST!")
+
+    print(PURPLE + r"""
+       ____ ___  ____  _____
+      / ___/ _ \|  _ \| ____|
+     | |  | | | | | | |  _|
+     | |__| |_| | |_| | |___
+      \____\___/|____/|_____|
+
+          THE PROGRAMMING
+             ADVENTURE
+    """ + R)
+
+    print(B + "FUNDAMENTALS OF PROGRAMMING" + R)
+    print("Learn. Play. Solve. Become a Programmer!")
+
+    print("\nCreated by:", CREATOR)
+    print("Section:", SECTION)
+
+    line()
+
+    name = input("\nEnter your name, future programmer: ").strip()
+
+    while not name:
+        name = input("Please enter your name: ").strip()
+
+    print(GREEN + f"\nWELCOME, {name.upper()}!" + R)
+    print("Your programming adventure starts NOW!")
+    print("\nYour mission is to complete the lessons,")
+    print("collect XP points, and defeat the FINAL BOSS!")
+
+    pause()
+    return name
+
+
+# ==========================================================
+# FUNDAMENTALS OF PROGRAMMING
+# ==========================================================
+
+def fundamentals():
+    title("LEVEL 1: FUNDAMENTALS OF PROGRAMMING")
+
+    print(BLUE + "\n1. WHAT IS PROGRAMMING?" + R)
+    print("Programming is the process of writing instructions")
+    print("that tell a computer what to do.")
+    print("Programmers use programming languages to create")
+    print("applications, websites, games, and software.")
+
+    print(BLUE + "\n2. WHAT CAN YOU USE TO CODE IN PYTHON?" + R)
+    print("Here are some tools used for Python programming:")
+    print("- IDLE")
+    print("- Visual Studio Code")
+    print("- PyCharm")
+    print("- Thonny")
+    print("- Pydroid 3 (Android)")
+    print("- Google Colab")
+    print("- Online Python editors")
+
+    print(BLUE + "\n3. BASIC PYTHON SYNTAX" + R)
+    print("Syntax means the rules used when writing code.")
+    print('print("Hello World!")')
+    print('name = "Jerome"')
+    print("Python is case-sensitive.")
+    print("Indentation is important.")
+    print("Strings need quotation marks.")
+
+    print(BLUE + "\n4. PRINTING OUTPUT AND INPUT" + R)
+    print("OUTPUT:")
+    print('print("Welcome to Python!")')
+    print("\nINPUT:")
+    print('name = input("Enter your name: ")')
+    print('print("Hello", name)')
+
+    print("\nprint() displays information.")
+    print("input() receives information from the user.")
+
+    print(BLUE + "\n5. TEXT AND NUMBERS" + R)
+    print('Text: "Hello World"')
+    print("Integer: 21")
+    print("Float: 3.14")
+    print("Boolean: True or False")
+
+    print(BLUE + "\n6. VARIABLES AND CONSTANTS" + R)
+    print("A variable stores information that can change.")
+    print('student = "Jerome"')
+    print("age = 21")
+    print("\nA constant is a value intended to remain unchanged.")
+    print("PI = 3.14159")
+    print("Python uses uppercase naming by convention for constants.")
+
+    print(BLUE + "\n7. COMMENTS" + R)
+    print("Comments are notes written inside the program.")
+    print("Python ignores comments when running the program.")
+    print('# This is a comment')
+    print('print("Hello")  # Displays Hello')
+
+    print(BLUE + "\n8. VARIABLE NAMING RULES" + R)
+    print("- A variable can contain letters and numbers.")
+    print("- It can use underscores (_).")
+    print("- It cannot begin with a number.")
+    print("- Spaces are not allowed.")
+    print("- Python keywords cannot be variable names.")
+    print("- Names are case-sensitive.")
+    print("\nCorrect: student_name, age1, total_score")
+    print("Incorrect: 1name, student name, class")
+
+    print(BLUE + "\n9. DATA TYPES IN PYTHON" + R)
+    print("int   = Whole numbers (10, 25, -5)")
+    print("float = Decimal numbers (3.14, 5.5)")
+    print("str   = Text ('Hello')")
+    print("bool  = True or False")
+    print("list  = [1, 2, 3]")
+    print("tuple = (1, 2, 3)")
+    print("
